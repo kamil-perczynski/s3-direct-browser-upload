@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="{{url}}" method="POST" enctype="multipart/form-data">
+        {{#each fields}}
+        <div>
+            <input type="text" size="100" name="{{@key}}" value={{this}}>
+        </div>
+        {{/each}}
+        <div>
+            <input type="file" name="file" />
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</body>
+
+</html>
