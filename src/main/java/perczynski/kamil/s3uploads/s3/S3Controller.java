@@ -16,7 +16,6 @@ public class S3Controller {
     private final ObjectMapper objectMapper;
     private final Handlebars handlebars;
 
-
     public HttpResponse renderForm() {
         PresignedUrl url = s3Service.presignUrl();
         return HttpResponse.builder()

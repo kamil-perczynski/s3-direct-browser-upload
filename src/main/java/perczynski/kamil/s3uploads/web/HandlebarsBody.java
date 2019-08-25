@@ -15,7 +15,7 @@ public class HandlebarsBody implements HttpResponse.Writable {
 
     @Override
     public void write(ServletOutputStream stream) throws IOException {
-        String apply = handlebars.compile(templateLocation).apply(model);
-        stream.print(apply);
+        String html = handlebars.compile(templateLocation).apply(model);
+        stream.print(html);
     }
 }
