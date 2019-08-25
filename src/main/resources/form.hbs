@@ -17,7 +17,7 @@
     <form action="{{url}}" method="POST" enctype="multipart/form-data">
         {{#each fields}}
         <div>
-            <input type="text" size="100" name="{{@key}}" value={{this}}>
+            <input type="text" size="100" name="{{@key}}" value="{{this}}" />
         </div>
         {{/each}}
         <div>
